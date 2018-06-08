@@ -201,7 +201,7 @@ nav h1 a {
   z-index: 1000;
 }
 .inside #map-container {
-  background: blue none repeat scroll 0 0;
+  background: #f3f3f3 none repeat scroll 0 0;
   margin-top: 161px;
 }
 .inside #map {
@@ -336,13 +336,13 @@ nav h1 a {
     height: 100%;
     position: fixed;
     right: 0;
-    top: 80px;
+    top: 110px;
     width: 50%;
     margin-top: 0px;
   }
 
   .inside #map {
-    height: 100%;
+    height: calc(100% - 175px);
   }
 
   .inside #footer {
