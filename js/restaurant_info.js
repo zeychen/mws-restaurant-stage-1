@@ -9,6 +9,7 @@ window.initMap = () => {
     if (error) { // Got an error!
       console.error(error);
     } else {
+      console.log('there"s a map!');
       self.map = new google.maps.Map(document.getElementById('map'), {
         zoom: 16,
         center: restaurant.latlng,
@@ -58,6 +59,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.alt = restaurant.name + ' Profile Image';
   image.setAttribute("srcset", "");
 
   const cuisine = document.getElementById('restaurant-cuisine');
