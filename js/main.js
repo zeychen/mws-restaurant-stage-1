@@ -138,7 +138,7 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
   const article = document.createElement('article');
-  article.setAttribute('role','article')
+  article.setAttribute('role','navigation')
   li.append(article);
 
   const image = document.createElement('img');

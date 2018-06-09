@@ -13,17 +13,15 @@
   <header>
     <h1>Restaurant Reviews</h1>
   </header>
-
-  <a href="#filter" class="skip-link">Skip to main content</a>
-
-  <main id="maincontent" role="main">
-    <section id="map-container" role="application" aria-label="google map">
+  <a href="#filter" class="skip-link">Skip to filter</a>
+  <main id="maincontent" >
+    <section tabindex="0" id="map-container" role="application" aria-label="google map">
       <div id="map"></div>
     </section>
-    <section aria-label="filters" role="search">
-      <div class="filter-options">
+    <section role="main" aria-label="restaurant list">
+      <div class="filter-options" role="search" aria-label="filters" id="filter" >
         <h2>Filter Results</h2>
-        <div id="filter" tabindex="0" class="filters">
+        <div class="filters">
           <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
             <option value="all">All Neighborhoods</option>
           </select>
@@ -32,7 +30,7 @@
           </select>
         </div>
       </div>
-      <ul id="restaurants-list"></ul>
+      <ul id="restaurants-list" aria-label="restaurant list"></ul>
     </section>
   </main>
 
@@ -42,7 +40,7 @@
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEwOJQAdsxaQFqXkFTvxAWQaOkF_j4Lo8&libraries=places&callback=initMap"></script>
 
 
-  <footer id="footer">
+  <footer id="footer" role="content-info">
     <span>Copyright (c) 2017
      <a href="/"><strong>Restaurant Reviews</strong></a> 
      All Rights Reserved.</span>
