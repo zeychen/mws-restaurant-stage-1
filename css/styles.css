@@ -9,14 +9,6 @@
   left: 0;
   z-index: 1001;
 }
-/* .skip-link:focus {
-  top: 0;
-} */
-
-/* *:focus {
-  outline: 0;
-  box-shadow: 0 0 5px 2px rgba(0, 153, 255, 0.8);
-} */
 
 body,td,th,p{
 	font-family: Arial, Helvetica, sans-serif;
@@ -67,28 +59,24 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   text-transform: uppercase;
 }
 /* ====================== Navigation ====================== */
-nav {
+header h1 {
   background-color: #252831;
   text-align:center;
-  padding: 20px;
-}
-nav h1 {
   margin: auto;
-}
-nav h1 a {
   color: #fff;
   font-size: 14pt;
   font-weight: 200;
   letter-spacing: 10px;
   text-transform: uppercase;
+  height: 54px;
+  padding:20px;
 }
 #breadcrumb {
-    padding: 10px 40px 16px;
-    list-style: none;
-    background-color: #eee;
-    font-size: 17px;
-    margin: 0;
-    /* width: calc(50% - 80px); */
+  padding: 10px 40px 16px;
+  list-style: none;
+  background-color: #eee;
+  font-size: 17px;
+  margin: 0;
 }
 
 /* Display list items side by side */
@@ -98,21 +86,28 @@ nav h1 a {
 
 /* Add a slash symbol (/) before/behind each list item */
 #breadcrumb li+li:before {
-    padding: 8px;
-    color: black;
-    content: "/\00a0";
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+/* Add font design to current page link */
+#breadcrumb [aria-current="page"] {
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
 }
 
 /* Add a color to all links inside the list */
 #breadcrumb li a {
-    color: #0275d8;
-    text-decoration: none;
+  color: #0275d8;
+  text-decoration: none;
 }
 
 /* Add a color on mouse-over */
 #breadcrumb li a:hover {
-    color: #01447e;
-    text-decoration: underline;
+  color: #01447e;
+  text-decoration: underline;
 }
 /* ====================== Map ====================== */
 #map {
@@ -219,7 +214,7 @@ nav h1 a {
 }
 .inside #map-container {
   background: #f3f3f3 none repeat scroll 0 0;
-  margin-top: 161px;
+  margin-top: 145px;
 }
 .inside #map {
   background-color: #ccc;
@@ -309,6 +304,9 @@ nav h1 a {
 
 
 @media only screen and (min-width: 420px){
+  header h1 {
+    line-height: 54px;
+  }
   /*********** Restaurant Filtering ************/
   .filter-options h2 {
     font-size: 1.5rem;
@@ -353,13 +351,13 @@ nav h1 a {
     height: 100%;
     position: fixed;
     right: 0;
-    top: 110px;
+    top: 67px;
     width: 50%;
     margin-top: 0px;
   }
 
   .inside #map {
-    height: calc(100% - 175px);
+    height: calc(100% - 132px);
   }
 
   .inside #footer {
@@ -371,7 +369,7 @@ nav h1 a {
   }
 
   #restaurant-container {
-    margin-top: 161px;
+    margin-top: 144px;
   }
   #reviews-container {
     margin-bottom: 65px;

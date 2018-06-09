@@ -11,18 +11,16 @@
 
 <body>
   <header>
-    <nav>
-      <h1><a tabindex="0" href="/">Restaurant Reviews</a></h1>
-    </nav>
+    <h1>Restaurant Reviews</h1>
   </header>
 
   <a href="#filter" class="skip-link">Skip to main content</a>
 
-  <main id="maincontent" aria-label="google map">
-    <section id="map-container" role="application">
+  <main id="maincontent" role="main">
+    <section id="map-container" role="application" aria-label="google map">
       <div id="map"></div>
     </section>
-    <section>
+    <section aria-label="filters" role="search">
       <div class="filter-options">
         <h2>Filter Results</h2>
         <div id="filter" tabindex="0" class="filters">
