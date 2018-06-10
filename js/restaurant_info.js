@@ -131,22 +131,34 @@ createReviewHTML = (review) => {
   art.setAttribute('aria-label','review by '+review.name);
   li.append(art);
 
+  const rev = document.createElement('div');
+  rev.className = 'review-title';
+  art.appendChild(rev);
+
   const name = document.createElement('p');
   name.innerHTML = review.name;
+  name.className = 'reviewer';
   art.setAttribute('aria-label','reviewer');
-  art.appendChild(name);
+  rev.appendChild(name);
 
   const date = document.createElement('p');
   date.innerHTML = review.date;
+  date.className = 'reviewDate';
   date.setAttribute('aria-label','review date');
-  art.appendChild(date);
+  rev.appendChild(date);
+
+  const ratingDiv = document.createElement('div');
+  ratingDiv.className = 'rating';
+  art.appendChild(ratingDiv);
 
   const rating = document.createElement('p');
+  rating.className = 'ratings';
   rating.setAttribute('aria-label','rating');
   rating.innerHTML = `Rating: ${review.rating}`;
-  art.appendChild(rating);
+  ratingDiv.appendChild(rating);
 
   const comments = document.createElement('p');
+  comments.className = 'comments';
   comments.innerHTML = review.comments;
   comments.setAttribute('aria-label','comment');
   art.appendChild(comments);
