@@ -17,9 +17,9 @@
     <h1>Restaurant Reviews</h1>
     <!-- Beginning nav -->
     <!-- Beginning breadcrumb -->
-    <nav aria-label="Breadcrumb" class="breadcrumb">
-      <ul id="breadcrumb" role="navigation" aria-label="breadcrumb navigation">
-        <li><a href="/">Restaurant Lists</a></li>
+    <nav role="navigation" aria-label="breadcrumb" class="breadcrumb">
+      <ul id="breadcrumb" >
+        <li><a href="/">Back to Restaurant Lists</a></li>
       </ul>
     </nav>
     <!-- End breadcrumb -->
@@ -27,34 +27,36 @@
   </header>
   <!-- End header -->
 
-  <a href="#maincontent" class="skip-link">Skip map to main content</a>
+  <a href="#restaurant-container" class="skip-link">Skip map to restaurant details</a>
 
   <!-- Beginning main -->
-  <main id="maincontent" role="main" aria-describedby="restaurant-name">
-    <!-- Beginning map -->
-    <section id="map-container" aria-label="google map">
-      <div id="map" role="application"></div>
-    </section>
-    <!-- End map -->
+  <main id="maincontent" role="main">
+    
     <!-- Beginning restaurant -->
-    <section id="restaurant-container" role="article" aria-label="restaurant details" tabindex="0">
+    <section id="restaurant-container" aria-labelledby="restaurant details" tabindex="0">
       <h2 id="restaurant-name"></h2>
-      <img id="restaurant-img" alt="restaurant profile photo">
+      <img id="restaurant-img" />
       <p id="restaurant-cuisine"></p>
       <p id="restaurant-address"></p>
-      <table id="restaurant-hours"></table>
+      <table id="restaurant-hours" aria-label="hours of operation" role="grid" 
+             aria-rowcount="7" aria-colcount="2"></table>
     </section>
     <!-- end restaurant -->
     <!-- Beginning reviews -->
-    <section id="reviews-container" role="article">
-      <ul id="reviews-list"></ul>
+    <section id="reviews-container" aria-label="restaurant reviews" tabindex="0">
+      <ul id="reviews-list" aria-labelledby="reviews-header"></ul>
     </section>
     <!-- End reviews -->
+    <!-- Beginning map -->
+    <section id="map-container" aria-label="google map" role="application">
+        <div id="map" ></div>
+      </section>
+      <!-- End map -->
   </main>
   <!-- End main -->
 
   <!-- Beginning footer -->
-  <footer id="footer"  role="content-info">
+  <footer id="footer" role="content-info">
     Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
   </footer>
   <!-- End footer -->
